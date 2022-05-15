@@ -24,14 +24,14 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function equalizeArray(arr) {\n    let obj = {};\n    for(let i of arr){\n       if(obj[i]){obj[i]++ }\n      else {obj[i]=1}  }\n     const values = Object.values(obj);\n      let max = Math.max(...values);\n       return arr.length - max;}"
             ],
             "outputs": []
         },
         {
             "language": "markdown",
             "source": [
-                "### **Optional**:"
+                "function equalizeArray(arr) {\n  let arrObj = {};\n  let maxCount = 0;\nfor (let num of arr) {\n    arrObj[num] = arrObj[num] + 1 || 1;\n  }\nfor (let value in arrObj) {\n    if (arrObj[value] > maxCount) {\n      maxCount = arrObj[value];\n    }\n  }\nreturn (arr.length - maxCount);\n}"
             ],
             "outputs": []
         },
